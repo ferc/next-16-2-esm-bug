@@ -34,10 +34,13 @@ importers:
         version: 2.5.1(@opentelemetry/api@1.9.0)
       '@sentry/nextjs':
         specifier: ^10.40.0
-        version: 10.44.0(@opentelemetry/context-async-hooks@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.6.0(@opentelemetry/api@1.9.0))(next@16.2.0(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(webpack@5.105.4)
+        version: 10.44.0(@opentelemetry/context-async-hooks@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.6.0(@opentelemetry/api@1.9.0))(next@16.2.0(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(webpack@5.105.4)
       '@t3-oss/env-nextjs':
         specifier: ^0.13.8
         version: 0.13.10(typescript@5.9.3)(zod@4.3.6)
+      '@test/ai-service':
+        specifier: workspace:*
+        version: link:../../packages/ai-service
       '@test/storage':
         specifier: workspace:*
         version: link:../../packages/storage
@@ -112,11 +115,29 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
+  packages/ai-service:
+    dependencies:
+      '@test/storage':
+        specifier: workspace:*
+        version: link:../storage
+      '@test/utils':
+        specifier: workspace:*
+        version: link:../utils
+      zod:
+        specifier: 4.3.6
+        version: 4.3.6
+
   packages/storage:
     dependencies:
       '@neondatabase/serverless':
         specifier: ^1.0.2
         version: 1.0.2
+      '@sentry/nextjs':
+        specifier: ^10.40.0
+        version: 10.44.0(@opentelemetry/context-async-hooks@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.6.0(@opentelemetry/api@1.9.0))(next@16.2.0(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(webpack@5.105.4)
+      '@test/utils':
+        specifier: workspace:*
+        version: link:../utils
       drizzle-orm:
         specifier: 0.44.7
         version: 0.44.7(@neondatabase/serverless@1.0.2)(@opentelemetry/api@1.9.0)(@types/pg@8.15.6)(pg@8.20.0)
@@ -4562,7 +4583,7 @@ snapshots:
 
   '@sentry/core@10.44.0': {}
 
-  '@sentry/nextjs@10.44.0(@opentelemetry/context-async-hooks@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.6.0(@opentelemetry/api@1.9.0))(next@16.2.0(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(webpack@5.105.4)':
+  '@sentry/nextjs@10.44.0(@opentelemetry/context-async-hooks@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.6.0(@opentelemetry/api@1.9.0))(next@16.2.0(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(webpack@5.105.4)':
     dependencies:
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/semantic-conventions': 1.40.0
