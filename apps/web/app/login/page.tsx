@@ -1,23 +1,18 @@
-import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
 
-async function loginAction() {
+async function testAction() {
   'use server'
-  redirect('/api/auth/test')
+  console.log('server action executed')
 }
 
-export default function LoginPage() {
+export default async function LoginPage() {
+  const cookieStore = await cookies()
+  const theme = cookieStore.get('theme')?.value ?? 'light'
+
   return (
-    <div>
-      <h1>Login Page</h1>
-      <form action={loginAction}>
-        <button type="submit">Sign In (server action)</button>
-      </form>
-      <p>Test endpoints:</p>
-      <ul>
-        <li><a href="/api/auth/test">API Auth Test</a></li>
-        <li><a href="/api/heavy">API Heavy</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-      </ul>
-    </div>
+    <form action={testAction}>
+      <h1>Login (theme: {theme})</h1>
+      <button type="submit">Test Server Action</button>
+    </form>
   )
 }
