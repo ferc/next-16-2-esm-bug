@@ -26,6 +26,9 @@ importers:
       '@sentry/nextjs':
         specifier: ^10.40.0
         version: 10.44.0(@opentelemetry/context-async-hooks@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/core@2.6.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@2.6.0(@opentelemetry/api@1.9.0))(next@16.2.0(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(webpack@5.105.4)
+      '@test/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       import-in-the-middle:
         specifier: ^3.0.0
         version: 3.0.0
@@ -60,6 +63,8 @@ importers:
       typescript:
         specifier: 5.9.3
         version: 5.9.3
+
+  packages/utils: {}
 
 packages:
 
