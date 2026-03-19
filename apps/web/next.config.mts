@@ -25,6 +25,7 @@ const AUTH_COOKIES = [
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  outputFileTracingRoot: path.resolve(__dirname, '../../'),
   turbopack: {
     root: path.resolve(__dirname, '../../'),
   },
