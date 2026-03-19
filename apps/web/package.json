@@ -70,6 +70,7 @@
     "undici": "^7.22.0",
     "uuid": "^11.0.2",
     "zod": "4.3.6",
+    "@test/ai-service": "workspace:*",
     "@test/storage": "workspace:*",
     "@test/ui": "workspace:*",
     "@test/utils": "workspace:*"

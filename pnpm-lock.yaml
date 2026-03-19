@@ -71,6 +71,9 @@ importers:
       '@tanstack/react-table':
         specifier: ^8.21.3
         version: 8.21.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@test/ai-service':
+        specifier: workspace:*
+        version: link:../../packages/ai-service
       '@test/storage':
         specifier: workspace:*
         version: link:../../packages/storage
@@ -216,6 +219,15 @@ importers:
       typescript:
         specifier: 5.9.3
         version: 5.9.3
+
+  packages/ai-service:
+    dependencies:
+      '@test/storage':
+        specifier: workspace:*
+        version: link:../storage
+      '@test/utils':
+        specifier: workspace:*
+        version: link:../utils
 
   packages/storage:
     dependencies:
