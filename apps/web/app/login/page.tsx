@@ -1,8 +1,9 @@
 import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
-async function testAction() {
+async function loginAction() {
   'use server'
-  console.log('server action executed')
+  redirect('/')
 }
 
 export default async function LoginPage() {
@@ -10,9 +11,9 @@ export default async function LoginPage() {
   const theme = cookieStore.get('theme')?.value ?? 'light'
 
   return (
-    <form action={testAction}>
+    <form action={loginAction}>
       <h1>Login (theme: {theme})</h1>
-      <button type="submit">Test Server Action</button>
+      <button type="submit">Sign In</button>
     </form>
   )
 }
