@@ -1,5 +1,3 @@
-import path from 'path'
-
-export function resolvePath(filePath: string): string {
-  return path.resolve(process.cwd(), filePath)
+export function hello(): string {
+  return 'hello from filesystem'
 }

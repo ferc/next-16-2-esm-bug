@@ -2,4 +2,4 @@ export function greet(name: string): string {
   return `Hello, ${name}!`
 }
 
-export { resolvePath } from './filesystem'
+export { hello } from './filesystem'
