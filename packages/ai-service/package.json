@@ -6,7 +6,6 @@
   "main": "src/index.ts",
   "dependencies": {
     "@test/storage": "workspace:*",
-    "@test/utils": "workspace:*",
-    "zod": "4.3.6"
+    "@test/utils": "workspace:*"
   }
 }
