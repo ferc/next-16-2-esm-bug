@@ -1,9 +1,12 @@
 import { NextResponse } from 'next/server'
+import { auth } from '../../../../lib/auth'
 
 export async function GET() {
-  return NextResponse.json({ message: 'Auth test endpoint works' })
+  const session = await auth()
+  return NextResponse.json({ message: 'Auth test endpoint works', session })
 }
 
 export async function POST() {
-  return NextResponse.json({ message: 'Auth POST works' })
+  const session = await auth()
+  return NextResponse.json({ message: 'Auth POST works', session })
 }
