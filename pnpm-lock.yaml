@@ -74,6 +74,9 @@ importers:
       '@test/storage':
         specifier: workspace:*
         version: link:../../packages/storage
+      '@test/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       '@test/utils':
         specifier: workspace:*
         version: link:../../packages/utils
@@ -237,6 +240,33 @@ importers:
       zod:
         specifier: 4.3.6
         version: 4.3.6
+
+  packages/ui:
+    dependencies:
+      '@tanstack/react-query':
+        specifier: ^5.91.2
+        version: 5.91.2(react@19.2.3)
+      '@tanstack/react-table':
+        specifier: ^8.21.3
+        version: 8.21.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      class-variance-authority:
+        specifier: ^0.7.1
+        version: 0.7.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      lucide-react:
+        specifier: ^0.543.0
+        version: 0.543.0(react@19.2.3)
+      react:
+        specifier: 19.2.3
+        version: 19.2.3
+      react-dom:
+        specifier: 19.2.3
+        version: 19.2.3(react@19.2.3)
+      tailwind-merge:
+        specifier: ^2.3.0
+        version: 2.6.1
 
   packages/utils: {}
 

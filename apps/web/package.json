@@ -71,6 +71,7 @@
     "uuid": "^11.0.2",
     "zod": "4.3.6",
     "@test/storage": "workspace:*",
+    "@test/ui": "workspace:*",
     "@test/utils": "workspace:*"
   },
   "devDependencies": {
