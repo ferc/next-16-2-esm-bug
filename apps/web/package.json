@@ -34,7 +34,9 @@
     "twilio": "^5.9.0",
     "undici": "^7.22.0",
     "zod": "4.3.6",
-    "@test/utils": "workspace:*"
+    "@test/utils": "workspace:*",
+    "@test/storage": "workspace:*",
+    "@test/ui": "workspace:*"
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "^1.0.0",
