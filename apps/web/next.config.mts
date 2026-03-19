@@ -8,8 +8,13 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-// 1. jiti env validation (same pattern as actual project)
-const jiti = createJiti(__filename)
+// jiti env validation with workspace aliases (same pattern as actual project)
+const jiti = createJiti(__filename, {
+  alias: {
+    '@test/storage': path.resolve(__dirname, '../../packages/storage/src'),
+    '@test/utils': path.resolve(__dirname, '../../packages/utils/src'),
+  },
+})
 jiti.import('./lib/env')
 
 // Auth cookies for rewrites/redirects
