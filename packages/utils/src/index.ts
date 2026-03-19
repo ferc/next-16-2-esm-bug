@@ -2,4 +2,4 @@ export function greet(name: string): string {
   return `Hello, ${name}!`
 }
 
-export { readRepoFile } from './filesystem'
+export { resolvePath } from './filesystem'

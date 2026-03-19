@@ -1,5 +1,5 @@
-import { readFile } from 'fs/promises'
+import path from 'path'
 
-export async function readRepoFile(filePath: string): Promise<string> {
-  return readFile(filePath, 'utf-8')
+export function resolvePath(filePath: string): string {
+  return path.resolve(process.cwd(), filePath)
 }
