@@ -1,0 +1,11 @@
+{
+  "name": "@test/storage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@test/utils": "workspace:*",
+    "zod": "4.3.6"
+  }
+}
