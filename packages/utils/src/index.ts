@@ -2,4 +2,6 @@ export function greet(name: string): string {
   return `Hello, ${name}!`
 }
 
-export { hello } from './filesystem'
+export function hello(): string {
+  return 'hello from utils'
+}
