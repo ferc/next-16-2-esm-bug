@@ -16,6 +16,7 @@ export default async function Home() {
     <div className={className}>
       <h1>{greeting} (theme: {theme})</h1>
       <p>{user.name} - {aiGreeting}</p>
+      <p>Last updated: March 2026</p>
     </div>
   )
 }
